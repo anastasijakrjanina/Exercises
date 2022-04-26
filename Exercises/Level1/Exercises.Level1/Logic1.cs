@@ -19,8 +19,28 @@ public class Logic1
     /// </summary>
     public bool CigarParty(int cigars, bool isWeekend)
     {
-        throw new NotImplementedException();
+        if (cigars >= 40 && (isWeekend || cigars <= 60))
+        {
+            return true;
+        }
+
+        return false;
     }
+    // dlinnoje re6enije vnizu
+    //   if(cigars < 40)
+    //    {
+    //        return false;
+    //    }
+    //   if(isWeekend)
+    //    {
+    //        return true;
+    //    }
+    //   if (cigars <= 60)
+    //    { 
+    //        return true;
+    //    }
+    //    return false;
+    //}
 
     /// <summary>
     /// You and your date are trying to get a table at a restaurant. The parameter "you" is the
@@ -36,7 +56,16 @@ public class Logic1
     /// </summary>
     public int DateFashion(int you, int date)
     {
-        throw new NotImplementedException();
+        if (you <= 2 || date <= 2)
+        {
+            return 0;
+        }
+        if (you >= 8 || date >= 8)
+        {
+            return 2;
+        }
+        return 1;
+       
     }
 
     /// <summary>
@@ -51,7 +80,18 @@ public class Logic1
     /// </summary>
     public bool SquirrelPlay(int temp, bool isSummer)
     {
-        throw new NotImplementedException();
+        int higherTemp = 90;
+
+        if (isSummer)
+        {
+            higherTemp += 10;
+        }
+
+        if (temp >= 60 && temp <= higherTemp)
+        {
+            return true;
+        }
+        return false;
     }
 
     /// <summary>
@@ -67,7 +107,16 @@ public class Logic1
     /// </summary>
     public int CaughtSpeeding(int speed, bool isBirthday)
     {
-        throw new NotImplementedException();
+        if ((speed <= 60 && !isBirthday) || (speed <= 65 && isBirthday))
+        {
+            return 0;
+        }
+        if ((speed > 60 && speed <= 80 && !isBirthday) || (speed > 60 && speed <= 85 && isBirthday))
+        {
+            return  1;
+        }
+        return 2;
+            
     }
 
     /// <summary>
@@ -80,7 +129,7 @@ public class Logic1
     /// </summary>
     public int SortaSum(int a, int b)
     {
-        throw new NotImplementedException();
+        return 20;
     }
 
     /// <summary>
