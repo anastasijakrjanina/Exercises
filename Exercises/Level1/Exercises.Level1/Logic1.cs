@@ -129,7 +129,12 @@ public class Logic1
     /// </summary>
     public int SortaSum(int a, int b)
     {
-        return 20;
+        int sum = a + b;
+        if (sum >= 10 && sum <20 )
+        { 
+            return 20; 
+        }
+            return sum;
     }
 
     /// <summary>
@@ -145,8 +150,22 @@ public class Logic1
     /// </summary>
     public string AlarmClock(int day, bool vacation)
     {
-        throw new NotImplementedException();
-    }
+        bool weekend = (day == 0 || day == 6);
+
+        if (!weekend && !vacation)
+        {
+            Console.WriteLine("7:00");
+        }
+        if (weekend && !vacation)
+        {
+            Console.WriteLine("10:00");
+        }
+        if (!weekend && vacation)
+        {
+            Console.WriteLine("10:00");
+        }
+        return "off";
+     }
 
     /// <summary>
     /// The number 6 is a truly great number. Given two int values, a and b, return true if either
@@ -159,7 +178,35 @@ public class Logic1
     /// </summary>
     public bool Love6(int a, int b)
     {
-        throw new NotImplementedException();
+        //throw new NotImplementedException();
+        if (Math.Abs(a) == 6 || Math.Abs(b) == 6)
+        {
+            return true;
+        }
+        else if (Math.Abs(a) - Math.Abs(b) == 6)
+        {
+            return true;
+        }
+        else if (Math.Abs(b) - Math.Abs(a) == 6)
+        {
+            return true;
+        }
+        else if (Math.Abs(a) + Math.Abs(b) == 6)
+        {
+            return true;
+        }
+        else if (Math.Abs(a) + 6 == b)
+        {
+            return true;
+        }
+        else if (Math.Abs(b) + 6 == a)
+        {
+            return true;
+        }
+        else {
+            return false;
+                }
+
     }
 
     /// <summary>
@@ -173,7 +220,23 @@ public class Logic1
     /// </summary>
     public bool In1To10(int n, bool outsideMode)
     {
-        throw new NotImplementedException();
+        //throw new NotImplementedException();
+        bool range = (n < 10 && n > 1);
+
+
+        if (!outsideMode && range)
+        {
+            return true;
+        }
+        else if (n == 1 || n == 10)
+        {
+            return true;
+        }
+        else if(outsideMode && !range)
+        {
+            return true;
+        }
+        else { return false;}
     }
 
     /// <summary>
