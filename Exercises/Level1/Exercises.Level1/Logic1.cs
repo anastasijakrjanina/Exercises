@@ -530,6 +530,13 @@ public class Logic1
     public bool ShareDigit(int a, int b)
     {
         throw new NotImplementedException();
+        //bool rangea = (a <= 99 && a >= 10);
+        //bool rangeb = (b <= 99 && b >= 10);
+
+        //if (rangea && rangeb)
+        //{
+
+        //}
     }
 
     /// <summary>
@@ -545,6 +552,7 @@ public class Logic1
     public int SumLimit(int a, int b)
     {
         throw new NotImplementedException();
+
     }
 }
 
