@@ -150,22 +150,60 @@ public class Logic1
     /// </summary>
     public string AlarmClock(int day, bool vacation)
     {
-        bool weekend = (day == 0 || day == 6);
-
-        if (!weekend && !vacation)
+        if (day == 1 && vacation)
         {
-            Console.WriteLine("7:00");
+            return "10:00";
         }
-        if (weekend && !vacation)
+        else if (day == 2 && vacation)
         {
-            Console.WriteLine("10:00");
+            return "10:00";
         }
-        if (!weekend && vacation)
+        else if (day == 3 && vacation)
         {
-            Console.WriteLine("10:00");
+            return "10:00";
         }
-        return "off";
-     }
+        else if (day == 4 && vacation)
+        {
+            return "10:00";
+        }
+        else if (day == 5 && vacation)
+        {
+            return "10:00";
+        }
+        else if (day == 1 && !vacation)
+        {
+            return "7:00";
+        }
+        else if (day == 2 && !vacation)
+        {
+            return "7:00";
+        }
+        else if (day == 3 && !vacation)
+        {
+            return "7:00";
+        }
+        else if (day == 4 && !vacation)
+        {
+            return "7:00";
+        }
+        else if (day == 5 && !vacation)
+        {
+            return "7:00";
+        }
+        else if (day == 6 && !vacation)
+        {
+            return "10:00";
+        }
+        else if (day == 0 && !vacation)
+        {
+            return "10:00";
+        }
+        else
+        {
+            return "off";
+        }
+   
+    }
 
     /// <summary>
     /// The number 6 is a truly great number. Given two int values, a and b, return true if either
@@ -179,11 +217,12 @@ public class Logic1
     public bool Love6(int a, int b)
     {
         //throw new NotImplementedException();
+
         if (Math.Abs(a) == 6 || Math.Abs(b) == 6)
         {
             return true;
         }
-        else if (Math.Abs(a) - Math.Abs(b) == 6)
+        else if (a + b == 6)
         {
             return true;
         }
@@ -191,21 +230,14 @@ public class Logic1
         {
             return true;
         }
-        else if (Math.Abs(a) + Math.Abs(b) == 6)
+        else if (Math.Abs(a) - Math.Abs(b) == 6)
         {
             return true;
         }
-        else if (Math.Abs(a) + 6 == b)
+        else
         {
-            return true;
-        }
-        else if (Math.Abs(b) + 6 == a)
-        {
-            return true;
-        }
-        else {
             return false;
-                }
+        }
 
     }
 
@@ -249,7 +281,24 @@ public class Logic1
     /// </summary>
     public bool SpecialEleven(int n)
     {
-        throw new NotImplementedException();
+        //throw new NotImplementedException();
+        bool number = n % 11 == 0;
+        bool number2 = n % 11 == 1;
+
+        if (n > 0 && number)
+        {
+             return true;
+        }
+        if (n > 0 && number2)
+        {
+            return true;
+        }
+        if (n == 0)
+        {
+            return true;
+        }
+        return false;
+        
     }
 
     /// <summary>
@@ -262,7 +311,18 @@ public class Logic1
     /// </summary>
     public bool More20(int n)
     {
-        throw new NotImplementedException();
+        //throw new NotImplementedException();
+        bool more20n1 = n % 20 == 1;
+        bool more20n2 = n % 20 == 2;
+
+        if (n > 0 && more20n1)
+        {
+            return true;
+        }
+        if (n > 0 && more20n2)
+        { return true;
+        }
+        return false;
     }
 
     /// <summary>
@@ -275,7 +335,19 @@ public class Logic1
     /// </summary>
     public bool Old35(int n)
     {
-        throw new NotImplementedException();
+        //throw new NotImplementedException();
+        bool number3 = n % 3 == 0;
+        bool number5 = n % 5 == 0;
+
+        if (n > 0 && number3 && !number5)
+        { 
+            return true; 
+        }
+        if (n > 0 && !number3 && number5)
+        {
+            return true;
+        }
+        return false;
     }
 
     /// <summary>
@@ -290,6 +362,22 @@ public class Logic1
     public bool Less20(int n)
     {
         throw new NotImplementedException();
+        //bool num20 = n % 20 == 0;
+        //int numless1 = n % 20;
+
+        //if (n > 0 && num20 && n == numless1 * 20 - 1)
+        //{
+        //    return true;
+        //}
+        //if (n > 0 && num20 && n == numless1 * 20 - 2)
+        //{ 
+        //    return true;
+        //}
+        //if (n > 0 && !num20 && n == numless1 * 20 - 2)
+        //{
+        //    return true;
+        //}
+        //return false;
     }
 
     /// <summary>
@@ -316,7 +404,16 @@ public class Logic1
     /// </summary>
     public int TeenSum(int a, int b)
     {
-        throw new NotImplementedException();
+        //throw new NotImplementedException();
+        int sum = a + b;
+        bool inta = a >= 13 && a <= 19;
+        bool intb = b >= 13 && b <= 19;
+
+        if (inta || intb)
+        {
+            return 19;
+        }
+         return  sum;
     }
 
     /// <summary>
@@ -330,7 +427,24 @@ public class Logic1
     /// </summary>
     public bool AnswerCell(bool isMorning, bool isMom, bool isAsleep)
     {
-        throw new NotImplementedException();
+        //throw new NotImplementedException();
+        if (!isMorning && !isMom && isAsleep)
+        { 
+            return false; 
+        }
+        if (isMorning && isMom && !isAsleep)
+        {
+            return true;
+        }
+        if (isMorning && !isMom && !isAsleep)
+        {
+            return false;
+        }
+        if (isMorning && isMom && isAsleep)
+        {
+            return false;
+        }
+        return true;
     }
 
     /// <summary>
