@@ -556,7 +556,20 @@ public class Logic1
     /// </summary>
     public bool TwoAsOne(int a, int b, int c)
     {
-        throw new NotImplementedException();
+        //throw new NotImplementedException();
+        if (a + b == c)
+        {
+            return true;
+        }
+        if (a + c == b)
+        {
+            return true;
+        }
+        if (b + c == a)
+        {
+            return true;
+        }
+        return false;
     }
 
     /// <summary>
@@ -569,7 +582,16 @@ public class Logic1
     /// </summary>
     public bool InOrder(int a, int b, int c, bool bOk)
     {
-        throw new NotImplementedException();
+        //throw new NotImplementedException();
+        if (!bOk && b > a && c > b)
+        {
+            return true;
+        }
+        if (bOk && c > b)
+        {
+            return true;
+        }
+        return false;
     }
 
     /// <summary>
