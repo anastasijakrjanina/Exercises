@@ -222,15 +222,15 @@ public class Logic1
         {
             return true;
         }
-        else if (a + b == 6)
+       if (b - a == Math.Abs(6))
         {
             return true;
         }
-        else if (Math.Abs(b) - Math.Abs(a) == 6)
+        if (a - b == Math.Abs(6))
         {
             return true;
         }
-        else if (Math.Abs(a) - Math.Abs(b) == 6)
+        if (a + b == Math.Abs(6))
         {
             return true;
         }
@@ -361,23 +361,16 @@ public class Logic1
     /// </summary>
     public bool Less20(int n)
     {
-        throw new NotImplementedException();
-        //bool num20 = n % 20 == 0;
-        //int numless1 = n % 20;
+        //throw new NotImplementedException();
+        bool num20 = n % 20 == 0;
+        bool numLess1 = (n + 1) % 20 == 0;
+        bool numLess2 = (n + 2) % 20 == 0;
 
-        //if (n > 0 && num20 && n == numless1 * 20 - 1)
-        //{
-        //    return true;
-        //}
-        //if (n > 0 && num20 && n == numless1 * 20 - 2)
-        //{ 
-        //    return true;
-        //}
-        //if (n > 0 && !num20 && n == numless1 * 20 - 2)
-        //{
-        //    return true;
-        //}
-        //return false;
+        if (n > 0 && !num20 && numLess1 || numLess2)
+        {
+            return true;
+        }
+        return false;
     }
 
     /// <summary>
@@ -474,7 +467,22 @@ public class Logic1
     /// </summary>
     public string FizzString(string str)
     {
-        throw new NotImplementedException();
+        //throw new NotImplementedException();
+ 
+
+        if (str.StartsWith("f") && str.EndsWith("b"))
+        {
+            return "FizzBuzz";
+        }
+        if (str.StartsWith("f"))
+        {
+            return "Fizz";
+        }
+        if (str.EndsWith("b"))
+        {
+            return "Buzz";
+        }
+        return str;
     }
 
     /// <summary>
@@ -490,7 +498,33 @@ public class Logic1
     /// </summary>
     public string FizzString2(int n)
     {
-        throw new NotImplementedException();
+        //throw new NotImplementedException();
+
+
+        if ((n % 3 == 0) && (n % 5 == 0))
+        {
+            string n1 = n.ToString();
+            n1 = "FizzBuzz";
+            return n1;
+
+        }
+        if (n % 3 == 0)
+        {
+            string n2 = n.ToString();
+            n2 = "Fizz";
+            return "Fizz";
+        }
+        if (n % 5 == 0)
+        {
+            string n3 = n.ToString();
+            n3 = "Buzz";
+            return "Buzz";
+        }
+        else
+        {
+            string n4 = n.ToString();
+            return n4 + "!";
+        }
     }
 
     /// <summary>
@@ -614,7 +648,25 @@ public class Logic1
     /// </summary>
     public int GreenTicket(int a, int b, int c)
     {
-        throw new NotImplementedException();
+        //throw new NotImplementedException();
+       
+        if (a == b && a == c)
+        {
+            return 20;
+        }
+        if (a == b && a != c)
+        {
+            return 10;
+        }
+        if (a == c && a != b)
+        {
+            return 10;
+        }
+        if (b == c && b != a)
+        {
+            return 10;
+        }
+        return 0;
     }
 
     /// <summary>
@@ -629,7 +681,20 @@ public class Logic1
     /// </summary>
     public int BlueTicket(int a, int b, int c)
     {
-        throw new NotImplementedException();
+        //throw new NotImplementedException();
+        if (a + b == 10 || b + c == 10 || a + c == 10)
+        {
+            return 10;
+        }
+        if ((a + b ) - (b + c ) == 10)
+        {
+            return 5;
+        }
+        if ((a + b) - (a + c) == 10)
+        {
+            return 5;
+        }
+        return 0;
     }
 
     /// <summary>
