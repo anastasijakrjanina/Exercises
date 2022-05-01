@@ -382,7 +382,22 @@ public class Logic1
     /// </summary>
     public bool NearTen(int num)
     {
-        throw new NotImplementedException();
+        //throw new NotImplementedException();
+        if (num > 0 && num % 10 == 2)
+        {
+            return true;
+        }
+        if (num > 0 && num % 10 == 1)
+        {
+            return true;
+        }
+        if (num > 0 && num % 10 == 0)
+        {
+            return true;
+        }
+         return false; 
+        
+
     }
 
     /// <summary>
@@ -451,8 +466,18 @@ public class Logic1
     /// </summary>
     public int TeaParty(int tea, int candy)
     {
-        throw new NotImplementedException();
-    }
+        //throw new NotImplementedException();
+        if (tea < 5 || candy < 5)
+        {
+            return 0;
+        }
+        if ((tea >= (candy * 2)) || (candy >= (tea * 2)))
+        {
+            return 2;
+        }
+        return 1;
+        
+     }
 
     /// <summary>
     /// Given a string str, if the string starts with "f" return "Fizz". If the string ends with "b"
@@ -502,21 +527,18 @@ public class Logic1
         if ((n % 3 == 0) && (n % 5 == 0))
         {
             string n1 = n.ToString();
-            n1 = "FizzBuzz";
-            return n1;
+            return "FizzBuzz!";
 
         }
         if (n % 3 == 0)
         {
             string n2 = n.ToString();
-            n2 = "Fizz";
-            return "Fizz";
+            return "Fizz!";
         }
         if (n % 5 == 0)
         {
             string n3 = n.ToString();
-            n3 = "Buzz";
-            return "Buzz";
+            return "Buzz!";
         }
         else
         {
