@@ -605,7 +605,24 @@ public class Logic1
     /// </summary>
     public bool InOrderEqual(int a, int b, int c, bool bOk)
     {
-        throw new NotImplementedException();
+        //throw new NotImplementedException();
+        if (!bOk && a < b && b < c)
+        {
+            return true;
+        }
+        if (bOk && (a == b) && b < c )
+        {
+            return true;
+        }
+        if (bOk && b == c && a < b)
+        {
+            return true;
+        }
+        if (bOk && (a == b) && (a == c))
+        {
+            return true;
+        }
+        return false;
     }
 
     /// <summary>
@@ -619,7 +636,16 @@ public class Logic1
     /// </summary>
     public bool LastDigit(int a, int b, int c)
     {
-        throw new NotImplementedException();
+        //throw new NotImplementedException();
+        double num1 = a % 10;
+        double num2 = b % 10;
+        double num3 = c % 10;
+
+        if ((num1 == num2) || (num2 == num3) || (num1 == num3))
+        {
+            return true;
+        }
+        return false; 
     }
 
     /// <summary>
@@ -632,7 +658,12 @@ public class Logic1
     /// </summary>
     public bool LessBy10(int a, int b, int c)
     {
-        throw new NotImplementedException();
+        //throw new NotImplementedException();
+        if ( a - b >= 10 || b - a >= 10 || c - a >= 10 || a - c >= 10 || c - b >= 10 || b - c >= 10)
+        {
+            return true;
+        }
+        return false;
     }
 
     /// <summary>
@@ -646,7 +677,27 @@ public class Logic1
     /// </summary>
     public int WithoutDoubles(int die1, int die2, bool noDoubles)
     {
-        throw new NotImplementedException();
+        //throw new NotImplementedException();
+        bool die1Max = die1 == 6; 
+        bool die2Max = die2 == 6;
+
+        if (noDoubles && !die1Max && !die2Max && die1 == die2)
+        {
+            return die1 + die2 + 1;
+        }
+        if (noDoubles && !die1Max && !die2Max && die1 != die2)
+        {
+            return die1 + die2;
+        }
+        if (noDoubles && die1Max)
+        {
+            return 1 + die2;
+        }
+        //if (noDoubles && die2Max)
+        //{
+        //    return 1 + die2;
+        //}
+        return die1 + die2;
     }
 
     /// <summary>
@@ -661,7 +712,19 @@ public class Logic1
     /// </summary>
     public int MaxMod5(int a, int b)
     {
-        throw new NotImplementedException();
+        //throw new NotImplementedException();
+
+       
+        if (a == b)
+        {
+            return 0;
+        }
+        if (a % 5 == b % 5)
+        {
+            return Math.Min(a, b);
+        }
+            return Math.Max(a, b);
+        
     }
 
     /// <summary>
@@ -676,7 +739,20 @@ public class Logic1
     /// </summary>
     public int RedTicket(int a, int b, int c)
     {
-        throw new NotImplementedException();
+        //throw new NotImplementedException();
+        if ( a == 2 && a == b && b == c)
+        {
+            return 10;
+        }
+        if (b != a && c != a)
+        {
+            return 1;
+        }
+        if (a == b && b == c)
+        {
+            return 5;
+        }
+        return 0;
     }
 
     /// <summary>
@@ -751,13 +827,7 @@ public class Logic1
     public bool ShareDigit(int a, int b)
     {
         throw new NotImplementedException();
-        //bool rangea = (a <= 99 && a >= 10);
-        //bool rangeb = (b <= 99 && b >= 10);
-
-        //if (rangea && rangeb)
-        //{
-
-        //}
+        
     }
 
     /// <summary>
