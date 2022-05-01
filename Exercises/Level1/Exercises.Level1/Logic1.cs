@@ -217,16 +217,14 @@ public class Logic1
     public bool Love6(int a, int b)
     {
         //throw new NotImplementedException();
+        int diff = a - b;
+        int diff2 = Math.Abs(diff);
 
-        if (Math.Abs(a) == 6 || Math.Abs(b) == 6)
+        if (a == 6 || b == 6)
         {
             return true;
         }
-       if (b - a == Math.Abs(6))
-        {
-            return true;
-        }
-        if (a - b == Math.Abs(6))
+        if (diff2 == 6)
         {
             return true;
         }
