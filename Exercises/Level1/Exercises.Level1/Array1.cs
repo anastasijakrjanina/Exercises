@@ -56,15 +56,14 @@ public class Array1
     /// 
     /// makePi() → [3, 1, 4]
     /// </summary>
-    public int[] MakePi()
-    {
-        //throw new NotImplementedException();
+     
         public int[] MakePi()
         {
+            //throw new NotImplementedException();
             return new int[] { 3, 1, 4 };
         }
 
-    }
+    
 
     /// <summary>
     /// Given 2 arrays of ints, a and b, return true if they have the same first element or they
@@ -107,11 +106,10 @@ public class Array1
     /// sum3([5, 11, 2]) → 18
     /// sum3([7, 0, 0]) → 7
     /// </summary>
-    public int Sum3(int[] nums)
-    {
-        //throw new NotImplementedException();
+   
         public int Sum3(int[] nums)
         {
+            //throw new NotImplementedException();
             int sum = 0;
 
             foreach (var num in nums)
@@ -124,7 +122,7 @@ public class Array1
 
         }
 
-    }
+    
 
     /// <summary>
     /// Given an array of ints length 3, return an array with the elements "rotated left" so {1, 2,
