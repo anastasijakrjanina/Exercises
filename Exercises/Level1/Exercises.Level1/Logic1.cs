@@ -382,20 +382,20 @@ public class Logic1
     /// </summary>
     public bool NearTen(int num)
     {
-        //throw new NotImplementedException();
-        if (num > 0 && num % 10 == 2)
-        {
-            return true;
-        }
-        if (num > 0 && num % 10 == 1)
-        {
-            return true;
-        }
-        if (num > 0 && num % 10 == 0)
-        {
-            return true;
-        }
-         return false; 
+        throw new NotImplementedException();
+        //if (num > 0 && num % 10 == 2)
+        //{
+        //    return true;
+        //}
+        //if (num > 0 && num % 10 == 1)
+        //{
+        //    return true;
+        //}
+        //if (num > 0 && num % 10 == 0)
+        //{
+        //    return true;
+        //}
+        // return false; 
         
 
     }
