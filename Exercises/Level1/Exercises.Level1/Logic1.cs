@@ -397,8 +397,7 @@ public class Logic1
         //}
         // return false; 
         
-
-    }
+   }
 
     /// <summary>
     /// Given 2 ints, a and b, return their sum. However, "teen" values in the range 13..19
