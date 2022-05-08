@@ -347,7 +347,16 @@ public class Array1
     /// </summary>
     public int[] MakeLast(int[] nums)
     {
-        throw new NotImplementedException();
+        //throw new NotImplementedException();
+        int lengthIndex = nums.Length * 2;
+        int[] nums2 = new int[lengthIndex];
+
+        int lastIndex = nums.Length - 1;
+        int lastElement = nums[lastIndex];
+
+        nums2[nums2.Length - 1] = nums[lastIndex];
+
+        return nums2;
 
     }
 
@@ -502,7 +511,24 @@ public class Array1
     /// </summary>
     public int[] FrontPiece(int[] nums)
     {
-        throw new NotImplementedException();
+        //throw new NotImplementedException();
+
+        while (nums.Length < 2)
+        {
+            return nums;
+        }
+        while (nums.Length >= 2)
+        {
+
+            int[] nums2 = new int[2];
+            nums2[0] = nums[0];
+            nums2[1] = nums[1];
+
+            nums = nums2;
+            return nums2;
+        }
+        return nums;
+
     }
 
     /// <summary>
@@ -516,6 +542,7 @@ public class Array1
     public bool Unlucky1(int[] nums)
     {
         throw new NotImplementedException();
+
     }
 
     /// <summary>
