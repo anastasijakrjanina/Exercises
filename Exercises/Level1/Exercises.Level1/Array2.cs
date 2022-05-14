@@ -18,6 +18,7 @@ public class Array2
     public int CountEvens(int[] nums)
     {
         throw new NotImplementedException();
+
     }
 
     /// <summary>

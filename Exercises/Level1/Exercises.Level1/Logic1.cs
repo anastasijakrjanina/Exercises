@@ -382,22 +382,26 @@ public class Logic1
     /// </summary>
     public bool NearTen(int num)
     {
-        throw new NotImplementedException();
-        //if (num > 0 && num % 10 == 2)
-        //{
-        //    return true;
-        //}
-        //if (num > 0 && num % 10 == 1)
-        //{
-        //    return true;
-        //}
-        //if (num > 0 && num % 10 == 0)
-        //{
-        //    return true;
-        //}
-        // return false; 
-        
-   }
+        //throw new NotImplementedException();
+        if (num > 0 && num % 10 == 2)
+        {
+            return true;
+        }
+        if (num > 0 && num % 10 == 1)
+        {
+            return true;
+        }
+        if (num > 0 && num % 10 == 0)
+        {
+            return true;
+        }
+        if (num > 0 && num % 10 == 8 || num % 10 == 9)
+        {
+            return true;
+        }
+        return false;
+
+    }
 
     /// <summary>
     /// Given 2 ints, a and b, return their sum. However, "teen" values in the range 13..19
@@ -825,7 +829,12 @@ public class Logic1
     /// </summary>
     public bool ShareDigit(int a, int b)
     {
-        throw new NotImplementedException();
+       //throw new NotImplementedException();
+       if (a/10 == b/10 || a/10 == b%10 || a%10 == b%10 || a%10 == b/10)
+        {
+            return true;
+        }
+        return false;
         
     }
 
@@ -841,8 +850,30 @@ public class Logic1
     /// </summary>
     public int SumLimit(int a, int b)
     {
-        throw new NotImplementedException();
+        //throw new NotImplementedException();
+        int sum = a + b;
 
+        if (sum <= a)
+        {
+            return sum;
+        }
+        if (sum > 9 && sum < 100 && a < 9)
+        {
+            return a;
+        }
+        if (sum > 9 && sum < 100 && a > 9 && a < 100)
+        {
+            return sum;
+        }
+        if (sum > 100 && a <9)
+        {
+            return a;
+        }
+        if (sum > 100 && a > 9 && a < 100)
+        {
+            return a;
+        }
+        return sum;
     }
 }
 

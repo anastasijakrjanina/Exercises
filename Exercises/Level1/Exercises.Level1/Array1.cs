@@ -230,15 +230,16 @@ public class Array1
     public int Sum2(int[] nums)
     {
         //throw new NotImplementedException();
-    
-        if (nums.Length < 2)
-        {
-            return nums[0];
-        }
+
         if (nums.Length == 0)
         {
             return 0;
         }
+        if (nums.Length < 2)
+        {
+            return nums[0];
+        }
+       
    
         return nums[0] + nums[1];
 
