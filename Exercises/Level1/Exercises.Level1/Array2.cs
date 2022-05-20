@@ -17,8 +17,28 @@ public class Array2
     /// </summary>
     public int CountEvens(int[] nums)
     {
-        throw new NotImplementedException();
+        //throw new NotImplementedException();
 
+        int numsCount = 0;
+
+        for (int i = 0; i < nums.Length; i++)
+        {
+            if (nums.Length == 0)
+            {
+                return 0;
+            }
+            if (nums[i] == 0)
+            {
+                numsCount++;
+                i++;
+            }
+            if (nums[0] % 2 == 0)
+            {
+                numsCount++;
+                i++;
+             }
+        }
+        return numsCount;
     }
 
     /// <summary>
@@ -32,7 +52,17 @@ public class Array2
     /// </summary>
     public int BigDiff(int[] nums)
     {
-        throw new NotImplementedException();
+        //throw new NotImplementedException();
+
+        int largest = nums[0];
+        int smallest = nums[0];
+
+        foreach (int num in nums)
+        {
+            largest = Math.Max(largest, num);
+            smallest = Math.Min(smallest, num);
+        }
+        return largest - smallest;
     }
 
     /// <summary>
@@ -62,7 +92,25 @@ public class Array2
     /// </summary>
     public int Sum13(int[] nums)
     {
-        throw new NotImplementedException();
+        //throw new NotImplementedException();
+        
+        int sum = 0;
+
+        for (var i = 0; i < nums.Length; i++)
+        {
+            if (nums.Length == 0)
+            {
+                return 0;
+            }
+            if (nums[i] == 13)
+            {
+                nums[i] = 0;
+                i++;
+                continue;
+            }
+            sum += nums[i];
+        }
+        return sum;
     }
 
     /// <summary>
@@ -76,7 +124,28 @@ public class Array2
     /// </summary>
     public int Sum67(int[] nums)
     {
-        throw new NotImplementedException();
+        //throw new NotImplementedException();
+        int sum = 0;
+        int num7 = 0;
+
+        if (nums.Length == 0)
+        {
+            return 0;
+        }
+        for (var i = 0; i < nums.Length; i++)
+        {
+            if (nums[i] == 6)
+            {
+                for (int j = i; nums[j] != 7; j++)
+                {
+                    nums[j] = 0;
+                    num7 = j;
+                }
+                nums[num7 + 1] = 0;
+            }
+            else sum += nums[i];
+        }
+        return sum;
     }
 
     /// <summary>
@@ -88,7 +157,14 @@ public class Array2
     /// </summary>
     public bool Has22(int[] nums)
     {
-        throw new NotImplementedException();
+        //throw new NotImplementedException();
+
+        for (int i = 0; i < nums.Length; i++)
+        {
+            if (nums[i] == 2 && i + 1 < nums.Length && nums[i + 1] == 2)
+                return true;
+        }
+        return false;
     }
 
     /// <summary>
@@ -100,7 +176,14 @@ public class Array2
     /// </summary>
     public bool Lucky13(int[] nums)
     {
-        throw new NotImplementedException();
+        //throw new NotImplementedException();
+
+        for (int i = 0; i < nums.Length; i++)
+        {
+            if (nums[i] == 1 || nums[i] == 3)
+                return false;
+        }
+        return true;
     }
 
     /// <summary>
@@ -112,7 +195,23 @@ public class Array2
     /// </summary>
     public bool Sum28(int[] nums)
     {
-        throw new NotImplementedException();
+        //throw new NotImplementedException();
+
+        int sum = 0;
+
+        for (int i = 0; i < nums.Length; i++)
+        {
+            if (nums[i] == 2)
+            {
+                sum += 2;
+            }
+        }
+
+        if (sum == 8)
+        {
+            return true;
+        }
+        return false;
     }
 
     /// <summary>
@@ -124,7 +223,28 @@ public class Array2
     /// </summary>
     public bool More14(int[] nums)
     {
-        throw new NotImplementedException();
+        //throw new NotImplementedException();
+
+        int count1 = 0;
+        int count4 = 0;
+
+        for (var i = 0; i < nums.Length; i++)
+        {
+            if (nums[i] == 1)
+            {
+                count1 += 1;
+            }
+            if (nums[i] == 4)
+            {
+                count4 += 1;
+            }
+        }
+
+        if (count1 > count4)
+        {
+            return true;
+        }
+        return false;
     }
 
     /// <summary>

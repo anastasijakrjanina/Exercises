@@ -65,7 +65,7 @@ public class Logic1
             return 2;
         }
         return 1;
-       
+
     }
 
     /// <summary>
@@ -113,10 +113,10 @@ public class Logic1
         }
         if ((speed > 60 && speed <= 80 && !isBirthday) || (speed > 60 && speed <= 85 && isBirthday))
         {
-            return  1;
+            return 1;
         }
         return 2;
-            
+
     }
 
     /// <summary>
@@ -130,11 +130,11 @@ public class Logic1
     public int SortaSum(int a, int b)
     {
         int sum = a + b;
-        if (sum >= 10 && sum <20 )
-        { 
-            return 20; 
+        if (sum >= 10 && sum < 20)
+        {
+            return 20;
         }
-            return sum;
+        return sum;
     }
 
     /// <summary>
@@ -202,7 +202,7 @@ public class Logic1
         {
             return "off";
         }
-   
+
     }
 
     /// <summary>
@@ -262,11 +262,11 @@ public class Logic1
         {
             return true;
         }
-        else if(outsideMode && !range)
+        else if (outsideMode && !range)
         {
             return true;
         }
-        else { return false;}
+        else { return false; }
     }
 
     /// <summary>
@@ -285,7 +285,7 @@ public class Logic1
 
         if (n > 0 && number)
         {
-             return true;
+            return true;
         }
         if (n > 0 && number2)
         {
@@ -296,7 +296,7 @@ public class Logic1
             return true;
         }
         return false;
-        
+
     }
 
     /// <summary>
@@ -318,7 +318,8 @@ public class Logic1
             return true;
         }
         if (n > 0 && more20n2)
-        { return true;
+        {
+            return true;
         }
         return false;
     }
@@ -338,8 +339,8 @@ public class Logic1
         bool number5 = n % 5 == 0;
 
         if (n > 0 && number3 && !number5)
-        { 
-            return true; 
+        {
+            return true;
         }
         if (n > 0 && !number3 && number5)
         {
@@ -422,7 +423,7 @@ public class Logic1
         {
             return 19;
         }
-         return  sum;
+        return sum;
     }
 
     /// <summary>
@@ -438,8 +439,8 @@ public class Logic1
     {
         //throw new NotImplementedException();
         if (!isMorning && !isMom && isAsleep)
-        { 
-            return false; 
+        {
+            return false;
         }
         if (isMorning && isMom && !isAsleep)
         {
@@ -479,8 +480,8 @@ public class Logic1
             return 2;
         }
         return 1;
-        
-     }
+
+    }
 
     /// <summary>
     /// Given a string str, if the string starts with "f" return "Fizz". If the string ends with "b"
@@ -494,7 +495,7 @@ public class Logic1
     public string FizzString(string str)
     {
         //throw new NotImplementedException();
- 
+
 
         if (str.StartsWith("f") && str.EndsWith("b"))
         {
@@ -613,7 +614,7 @@ public class Logic1
         {
             return true;
         }
-        if (bOk && (a == b) && b < c )
+        if (bOk && (a == b) && b < c)
         {
             return true;
         }
@@ -648,7 +649,7 @@ public class Logic1
         {
             return true;
         }
-        return false; 
+        return false;
     }
 
     /// <summary>
@@ -662,7 +663,7 @@ public class Logic1
     public bool LessBy10(int a, int b, int c)
     {
         //throw new NotImplementedException();
-        if ( a - b >= 10 || b - a >= 10 || c - a >= 10 || a - c >= 10 || c - b >= 10 || b - c >= 10)
+        if (a - b >= 10 || b - a >= 10 || c - a >= 10 || a - c >= 10 || c - b >= 10 || b - c >= 10)
         {
             return true;
         }
@@ -681,7 +682,7 @@ public class Logic1
     public int WithoutDoubles(int die1, int die2, bool noDoubles)
     {
         //throw new NotImplementedException();
-        bool die1Max = die1 == 6; 
+        bool die1Max = die1 == 6;
         bool die2Max = die2 == 6;
 
         if (noDoubles && !die1Max && !die2Max && die1 == die2)
@@ -717,7 +718,7 @@ public class Logic1
     {
         //throw new NotImplementedException();
 
-       
+
         if (a == b)
         {
             return 0;
@@ -726,8 +727,8 @@ public class Logic1
         {
             return Math.Min(a, b);
         }
-            return Math.Max(a, b);
-        
+        return Math.Max(a, b);
+
     }
 
     /// <summary>
@@ -743,7 +744,7 @@ public class Logic1
     public int RedTicket(int a, int b, int c)
     {
         //throw new NotImplementedException();
-        if ( a == 2 && a == b && b == c)
+        if (a == 2 && a == b && b == c)
         {
             return 10;
         }
@@ -770,7 +771,7 @@ public class Logic1
     public int GreenTicket(int a, int b, int c)
     {
         //throw new NotImplementedException();
-       
+
         if (a == b && a == c)
         {
             return 20;
@@ -807,7 +808,7 @@ public class Logic1
         {
             return 10;
         }
-        if ((a + b ) - (b + c ) == 10)
+        if ((a + b) - (b + c) == 10)
         {
             return 5;
         }
@@ -829,13 +830,13 @@ public class Logic1
     /// </summary>
     public bool ShareDigit(int a, int b)
     {
-       //throw new NotImplementedException();
-       if (a/10 == b/10 || a/10 == b%10 || a%10 == b%10 || a%10 == b/10)
+        //throw new NotImplementedException();
+        if (a / 10 == b / 10 || a / 10 == b % 10 || a % 10 == b % 10 || a % 10 == b / 10)
         {
             return true;
         }
         return false;
-        
+
     }
 
     /// <summary>
@@ -853,27 +854,13 @@ public class Logic1
         //throw new NotImplementedException();
         int sum = a + b;
 
-        if (sum <= a)
-        {
+        int sum_str = sum.ToString().Length; 
+        int a_str = a.ToString().Length; 
+
+        if (sum_str == a_str)
             return sum;
-        }
-        if (sum > 9 && sum < 100 && a < 9)
-        {
+        else
             return a;
-        }
-        if (sum > 9 && sum < 100 && a > 9 && a < 100)
-        {
-            return sum;
-        }
-        if (sum > 100 && a <9)
-        {
-            return a;
-        }
-        if (sum > 100 && a > 9 && a < 100)
-        {
-            return a;
-        }
-        return sum;
     }
 }
 
